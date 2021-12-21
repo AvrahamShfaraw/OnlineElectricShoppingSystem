@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="MyFirstWebApplication.Default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server" >
+    </asp:ContentPlaceHolder>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+     <link href="Default.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <style type="text/css">
+        
+        .auto-style7 {
+            width: 319px;
+            height: 50px;
+        }
+        
+        .auto-style8 {
+            width: 653px;
+            height: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+             <br /><br />
+            <table style=" width:1100px; margin:0 auto;"  >                
+                <tr style=" width:1100px; ">  
+                    <td class="auto-style3" >
+                        <asp:ImageButton ID="Image3" runat="server" ImageUrl="~/Images/Electric-logo-A89B112D67-seeklogo.com.png" OnClick="Image3_Click" Height="54px" Width="80px" />
+                    </td>
+                    <td class="auto-style8" style="font:bold 24px arial,verdana;text-align:center;" dir="rtl" >
+                       
+                        <asp:Button ID="Button1" runat="server" Text="הרשם" class="btn btn-dark" Font-Names="Arial" OnClick="Button1_Click" align="center" Height="40px" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       
+                        מוצרי חשמל ואלקטרוניקה , במחירים לכל כיס .</td>
+                    <td  style="text-align:right;" class="auto-style7">                                                                 
+                        &nbsp;
+                        &nbsp;<asp:ImageButton ID="ImageButton2" runat="server" Width="40px" ImageUrl="~/Images/delivery-car (1).png" OnClick="ImageButton2_Click" Height="40px"/>
+                        &nbsp;
+                        <asp:ImageButton ID="ImageButton3" runat="server" Height="40px" 
+                            ImageUrl="~/Images/5296765_camera_instagram_instagram logo_icon.png" Width="40px" />
+                        &nbsp;
+                        <asp:ImageButton ID="ImageButton4" runat="server" Height="40px" 
+                            ImageUrl="~/Images/5365678_fb_facebook_facebook logo_icon.png" Width="40px" />                        
+                        <asp:ImageButton ID="ImageButton1" runat="server" 
+                         ImageUrl="~/Images/1814095_cart_checkout_commerce_shopping cart_icon.png" OnClick="ImageButton1_Click"  Height="40px" Width="40px" CssClass="auto-style2" /> 
+                        &nbsp;<asp:Label ID="Label2" runat="server" style="text-align:center;" Font-Bold="True" ForeColor="Black" Font-Size="X-Large" >0</asp:Label>                                    
+                     
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;                                    
+                     
+                    </td>                   
+               </tr>
+                
+                    
+                <tr style=" width:1100px; height: 50px ;" align="center">
+                    <%--<td style="text-align:right;" class="auto-style2"  >
+                        <asp:ImageButton ID="ImageButton5" runat="server" Height="50px" ImageUrl="~/Images/2024644_login_user_avatar_person_users_icon.png" OnClick="ImageButton5_Click" Width="50px" />                                             
+                     
+                        <asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="True" Font-Size="Small" Font-Underline="False" ForeColor="Black" NavigateUrl="~/Register.aspx" align="center">הרשמו</asp:HyperLink>
+                    </td>--%>
+                    <td colspan="3" align="center" dir="rtl">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Menu ID="Menu1" runat="server" dir="trl" Orientation="Horizontal"  BorderColor="White" Font-Size="X-Large" SkipLinkText="" Font-Bold="True" align="center" >
+                            <Items>
+                                <asp:MenuItem Text="סלולר ותקשורת" Value="סלולר ותקשורת" NavigateUrl="~/סלולר ותקשורת.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="מחשבים וציוד היקפי" Value="מחשבים וציוד היקפי" NavigateUrl="~/מחשבים וציוד היקיפי.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="טלויזיות ומסכים " Value="טלויזיות ומסכים " NavigateUrl="~/טלויזיות ומסכים.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="קונסולות וגיימניג" Value="קונסולות וגיימניג" NavigateUrl="~/קונסולות וגיימינג.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="דף הבית" Value="דף הבית                               "></asp:MenuItem>
+                            </Items>                         
+                            <StaticHoverStyle BorderStyle="Outset" ForeColor="White" Height="20px" BackColor="#0066FF" BorderColor="#0066FF" />
+                            <StaticMenuItemStyle Font-Bold="True" Font-Names="Copperplate Gothic Bold" Font-Size="Small" ForeColor="Black" HorizontalPadding="50px" />                          
+                        </asp:Menu>
+                    </td>                                  
+                   
+                
+            
+                </tr>
+      </table>
+            <br /><br />
+            <table style=" width:1100px; margin:0 auto;">
+                 <tr >                  
+                    <td colspan="3" style="text-align:center;" align="center" >
+                        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" >
+                            <ContentTemplate>
+                                <asp:Timer ID="timer" runat="server" Interval="2000" OnTick="timer_Tick">
+                                </asp:Timer>
+                                <asp:Image ID="Image2" runat="server" Height="70px" Width="930px" align="center" />
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </td>
+                </tr>
+            </table>
+            <table style=" width:1100px; margin:0 auto;">
+                <tr>
+                    <td colspan="3">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>              
+                
+            </table> 
+            <br />
+            <br />
+            <br />
+            <table style=" width:1100px; margin:0 auto;"  >
+                <tr >
+                    <td colspan="3" align="center">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/payment-desktop (1).png" BorderStyle="None"  Width="955px" />                     
+                    </td>
+                </tr>
+
+             </table>
+        </div>
+    </form>
+</body>
+</html>

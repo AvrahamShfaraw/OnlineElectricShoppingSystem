@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="MyFirstWebApplication.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table align="center" >
+                <tr>
+                    <td>
+                        <asp:Image ID="Image1" runat="server" Width="1200px" ImageUrl="~/Images/New Project (14).png" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <table align="center" >
+                                <tr>
+                                    <td>
+                                        <asp:Button ID="btnCategory" runat="server" Text="הוספת קטגוריה"  CausesValidation="False" class="highlight-button btn btn-very-small button xs-no-margin"  OnClick="btnCategory_Click" />
+                                    </td>
+                                     <td>
+                                         <asp:Button ID="btnAddProduct" runat="server" Text="הוספת מוצר"  CausesValidation="False" class="highlight-button btn btn-very-small button xs-no-margin"   OnClick="btnAddProduct_Click" />
+                                    </td>
+                                    <td>
+                                        <asp:Button ID="btnUpdateProduct" runat="server" Text="עדכון מוצר" CausesValidation="False" class="highlight-button btn btn-very-small button xs-no-margin"  OnClick="btnUpdateProduct_Click" />
+                                    </td>
+                                    <td>
+                                        <asp:Button ID="btnUpdateOrderStatus" runat="server" Text="עדכון הזמנה"  CausesValidation="False" class="highlight-button btn btn-very-small button xs-no-margin"   OnClick="btnUpdateOrderStatus_Click" />
+                                    </td>
+                                    <td>
+                                        <asp:Button ID="btnHome" runat="server" Text="דף הבית"  class="highlight-button btn btn-very-small button xs-no-margin"   OnClick="btnHome_Click" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+                         </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>
